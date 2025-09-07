@@ -1,4 +1,3 @@
-/* Import Google Fonts - Stretch Goal */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 /* Reset and Base Styles */
@@ -18,7 +17,7 @@ body {
     padding: 140px 20px 40px 20px; /* Adjusted for fixed header */
 }
 
-/* Header and Navigation Styles - NEW for assignment */
+/* Header and Navigation Styles */
 header {
     position: fixed;
     top: 0;
@@ -31,7 +30,7 @@ header {
     padding: 1rem 2rem;
 }
 
-/* Main heading in header - Modified from your original */
+/* Main heading in header */
 header h1 {
     text-align: center;
     background: linear-gradient(45deg, #3498db, #2980b9);
@@ -363,7 +362,7 @@ section h2 {
     }
 }
 
-/* Accessibility Improvements */
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
