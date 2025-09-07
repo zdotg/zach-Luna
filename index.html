@@ -7,7 +7,20 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <h1>Zach Gallman</h1>
+    <header>
+        <h1>Zach Gallman</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#connect">Connect</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    
     <section id="about">
         <h2>About Me</h2>
         <p>
@@ -34,37 +47,62 @@
     </section>
     <section id="experience">
         <h2>Experience</h2>
-        <ul>
-            <li>
+        <div class="experience-item">
+            <div class="experience-header">
+                <h3 class="job-title">Web Developer</h3>
+                <span class="job-dates">2023 - Present</span>
+            </div>
+            <p class="job-description">
                 Experience with <strong>JavaScript</strong>, <strong>TypeScript</strong>, 
                 <strong>React</strong>, <strong>Node.js</strong>, <strong>HTML</strong>, and <strong>CSS</strong>.
-            </li>
-            <li>
+            </p>
+        </div>
+        
+        <div class="experience-item">
+            <div class="experience-header">
+                <h3 class="job-title">Full-Stack Project Developer</h3>
+                <span class="job-dates">2023</span>
+            </div>
+            <p class="job-description">
                 Built a <strong>weather-based playlist app</strong> using React, Spotify, and Open-Meteo APIs 
                 with animations powered by <strong>Framer Motion</strong>.
-            </li>
-            <li>
+            </p>
+        </div>
+        
+        <div class="experience-item">
+            <div class="experience-header">
+                <h3 class="job-title">Creative Developer</h3>
+                <span class="job-dates">2023</span>
+            </div>
+            <p class="job-description">
                 Created <strong>interactive p5.js projects</strong> exploring generative art and creative coding.
-            </li>
-            <li>
                 Developing a personal <strong>portfolio website</strong> to showcase projects and design work.
-            </li>
+            </p>
+        </div>
+    </section>
+
+   <section id="skills">
+        <h2>Skills</h2>
+        <!-- Javascript here later -->
+    </section>
+
+     <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <!-- Projects will be populated via API call using JavaScript later -->
         </ul>
     </section>
-    <section id="connect">
+
+   <section id="connect">
         <h2>Connect</h2>
-       <ul>
-            <li>
-                <a href="https://github.com/zdotg" target="_blank" rel="noopener noreferrer">
+        <div class="social-links">
+            <a href="https://github.com/zdotg" target="_blank" rel="noopener noreferrer" class="social-link">
                 GitHub Profile
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/zach-gallman/" target="_blank" rel="noopener noreferrer">
+            </a>
+            <a href="https://www.linkedin.com/in/zach-gallman/" target="_blank" rel="noopener noreferrer" class="social-link">
                 LinkedIn Profile
-                </a>
-            </li>
-        </ul>
+            </a>
+        </div>
     </section>
 </body>
 </html>
