@@ -205,8 +205,33 @@ section h2 {
 }
 
 /* Skills Section */
-#skills {
-    background: rgba(255, 255, 255, 0.95);
+#skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+#skills li {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 25px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#skills li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+    background: linear-gradient(135deg, #2980b9, #34495e);
 }
 
 /* Projects Section */
@@ -276,6 +301,22 @@ section h2 {
     margin-right: 8px;
 }
 
+/* Footer Styling */
+footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #ecf0f1;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
@@ -359,6 +400,43 @@ section h2 {
         padding: 15px 25px;
         font-size: 0.9rem;
         width: 220px;
+    }
+}
+
+/* Responsive Adjustments for Skills */
+    @media screen and (min-width: 768px) {
+    #skills ul {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    #skills li {
+        padding: 1.2rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    footer {
+        padding: 2.5rem;
+    }
+    
+    footer p {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #skills ul {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+    
+    #skills li {
+        padding: 1.5rem 2rem;
+        font-size: 1.1rem;
+    }
+    
+    footer {
+        padding: 3rem;
     }
 }
 
