@@ -1,3 +1,4 @@
+/* Import Google Fonts - Stretch Goal */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 /* Reset and Base Styles */
@@ -17,7 +18,7 @@ body {
     padding: 140px 20px 40px 20px; /* Adjusted for fixed header */
 }
 
-/* Header and Navigation Styles */
+/* Header and Navigation Styles - NEW for assignment */
 header {
     position: fixed;
     top: 0;
@@ -30,7 +31,7 @@ header {
     padding: 1rem 2rem;
 }
 
-/* Main heading in header */
+/* Main heading in header - Modified from your original */
 header h1 {
     text-align: center;
     background: linear-gradient(45deg, #3498db, #2980b9);
@@ -205,33 +206,8 @@ section h2 {
 }
 
 /* Skills Section */
-#skills ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    list-style: none;
-    padding: 0;
-    margin-top: 2rem;
-}
-
-#skills li {
-    background: linear-gradient(135deg, #3498db, #2980b9);
-    color: white;
-    padding: 1rem 1.5rem;
-    border-radius: 25px;
-    text-align: center;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-#skills li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
-    background: linear-gradient(135deg, #2980b9, #34495e);
+#skills {
+    background: rgba(255, 255, 255, 0.95);
 }
 
 /* Projects Section */
@@ -241,6 +217,160 @@ section h2 {
 
 #projects ul {
     list-style: none;
+}
+
+/* Leave a Message Form Section */
+#leave-message {
+    background: linear-gradient(135deg, #2cc492 0%, #9b59b6 100%);
+}
+
+#leave-message h2 {
+    color: #ecf0f1;
+    border-bottom-color: rgba(236, 240, 241, 0.8);
+}
+
+#leave-message form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#leave-message label {
+    color: #ecf0f1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    display: block;
+}
+
+#leave-message input,
+#leave-message textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0 15px 0;
+    border: 2px solid rgba(236, 240, 241, 0.3);
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#leave-message input:focus,
+#leave-message textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+
+#leave-message textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#leave-message button[type="submit"] {
+    width: 100%;
+    padding: 15px 30px;
+    margin-top: 10px;
+    background: linear-gradient(45deg, #2c3e50, #34495e);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#leave-message button[type="submit"]:hover {
+    background: linear-gradient(45deg, #4c345e, #3498db);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+#leave-message button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* Messages Section */
+#messages {
+    background: linear-gradient(135deg, #7b159f 0%, #1abc9c 100%);
+}
+
+#messages h2 {
+    color: #ecf0f1;
+    border-bottom-color: rgba(236, 240, 241, 0.8);
+}
+
+#messages ul {
+    list-style: none;
+    padding: 0;
+}
+
+#messages li {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border-left: 5px solid #16a085;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#messages li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#messages li a {
+    color: #16a085;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#messages li a:hover {
+    color: #1abc9c;
+    text-decoration: underline;
+}
+
+#messages li span {
+    color: #2c3e50;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+#messages li button {
+    align-self: flex-start;
+    padding: 8px 20px;
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    margin-top: 5px;
+}
+
+#messages li button:hover {
+    background: linear-gradient(45deg, #c0392b, #e74c3c);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#messages li button:active {
+    transform: translateY(0);
 }
 
 /* Connect Section - Modified for flexbox layout */
@@ -301,22 +431,6 @@ section h2 {
     margin-right: 8px;
 }
 
-/* Footer Styling */
-footer {
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-    color: #ecf0f1;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
-}
-
-footer p {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-
-}
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
@@ -370,6 +484,25 @@ footer p {
         width: 250px;
         text-align: center;
     }
+    
+    /* Form responsive styles */
+    #leave-message input,
+    #leave-message textarea {
+        padding: 15px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    #leave-message button[type="submit"] {
+        padding: 18px 30px;
+        font-size: 1rem;
+        min-height: 50px; /* Better touch target */
+    }
+    
+    #messages li button {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+        min-height: 44px; /* Better touch target */
+    }
 }
 
 @media (max-width: 480px) {
@@ -403,44 +536,7 @@ footer p {
     }
 }
 
-/* Responsive Adjustments for Skills */
-    @media screen and (min-width: 768px) {
-    #skills ul {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 1.5rem;
-    }
-    
-    #skills li {
-        padding: 1.2rem 1.5rem;
-        font-size: 1rem;
-    }
-    
-    footer {
-        padding: 2.5rem;
-    }
-    
-    footer p {
-        font-size: 1.1rem;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    #skills ul {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
-    }
-    
-    #skills li {
-        padding: 1.5rem 2rem;
-        font-size: 1.1rem;
-    }
-    
-    footer {
-        padding: 3rem;
-    }
-}
-
-/* Accessibility */
+/* Accessibility Improvements */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;

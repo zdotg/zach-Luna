@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zach Gallman's Portfolio</title>
     <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
 </head>
 <body>
     <header>
@@ -16,7 +17,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#connect">Connect</a></li>
-
+                <li><a href="#leave-message">Leave a Message</a></li>
             </ul>
         </nav>
     </header>
@@ -45,6 +46,7 @@
             <strong>development</strong>, <strong>design</strong>, and <strong>storytelling</strong>.
         </p>
     </section>
+    
     <section id="experience">
         <h2>Experience</h2>
         <div class="experience-item">
@@ -80,20 +82,20 @@
             </p>
         </div>
     </section>
-
-   <section id="skills">
+    
+    <section id="skills">
         <h2>Skills</h2>
-        <ul></ul>
+        <!-- This section will be populated with JavaScript later -->
     </section>
-
-     <section id="projects">
+    
+    <section id="projects">
         <h2>Projects</h2>
         <ul>
             <!-- Projects will be populated via API call using JavaScript later -->
         </ul>
     </section>
-
-   <section id="connect">
+    
+    <section id="connect">
         <h2>Connect</h2>
         <div class="social-links">
             <a href="https://github.com/zdotg" target="_blank" rel="noopener noreferrer" class="social-link">
@@ -104,7 +106,26 @@
             </a>
         </div>
     </section>
-
-    <script src="js/index.js"></script>
+    
+    <section id="leave-message">
+        <h2>Leave a Message</h2>
+        <form name="leave_message">
+            <label for="usersName">Name:</label><br>
+            <input type="text" id="usersName" name="usersName" required><br>
+            
+            <label for="usersEmail">Email:</label><br>
+            <input type="email" id="usersEmail" name="usersEmail" required><br>
+            
+            <label for="usersMessage">Message:</label><br>
+            <textarea id="usersMessage" name="usersMessage" required></textarea><br>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <section id="messages">
+        <h2>Messages</h2>
+        <ul></ul>
+    </section>
 </body>
 </html>

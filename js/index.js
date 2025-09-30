@@ -35,3 +35,75 @@ for (let i = 0; i < skills.length; i++) {
     skill.innerText = skills[i];
     skillsList.appendChild(skill);
 }
+
+// Handle Message Form Submit
+const messageForm = document.forms['leave_message'];
+
+messageForm.addEventListener('submit', (event) => {
+    // Prevent default form submission behavior (page refresh)
+    event.preventDefault();
+    
+    // Retrieve values from form fields
+    const usersName = event.target.usersName.value;
+    const usersEmail = event.target.usersEmail.value;
+    const usersMessage = event.target.usersMessage.value;
+    
+    // Log the values to console
+    console.log('Name:', usersName);
+    console.log('Email:', usersEmail);
+    console.log('Message:', usersMessage);
+    
+    // Select the messages section and list
+    const messageSection = document.getElementById('messages');
+    const messageList = messageSection.querySelector('ul');
+    
+    // Create new list item
+    const newMessage = document.createElement('li');
+    
+    // Set the inner HTML with name (as clickable email link) and message
+    newMessage.innerHTML = `
+        <a href="mailto:${usersEmail}">${usersName}</a>
+        <span>${usersMessage}</span>
+    `;
+    
+    // Create remove button
+    const removeButton = document.createElement('button');
+    removeButton.innerText = 'remove';
+    removeButton.type = 'button';
+    
+    // Add event listener to remove button
+    removeButton.addEventListener('click', () => {
+        const entry = removeButton.parentNode;
+        entry.remove();
+        
+        // Optional: Hide messages section if list is empty
+        checkMessagesEmpty();
+    });
+    
+    // Append remove button to the message
+    newMessage.appendChild(removeButton);
+    
+    // Append the new message to the list
+    messageList.appendChild(newMessage);
+    
+    // Show messages section if it was hidden
+    messageSection.style.display = 'block';
+    
+    // Reset the form
+    messageForm.reset();
+});
+
+// Optional: Function to hide messages section when empty
+function checkMessagesEmpty() {
+    const messageSection = document.getElementById('messages');
+    const messageList = messageSection.querySelector('ul');
+    
+    if (messageList.children.length === 0) {
+        messageSection.style.display = 'none';
+    }
+}
+
+// Optional: Hide messages section on page load if empty
+document.addEventListener('DOMContentLoaded', () => {
+    checkMessagesEmpty();
+});
