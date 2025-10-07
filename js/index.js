@@ -107,3 +107,44 @@ function checkMessagesEmpty() {
 document.addEventListener('DOMContentLoaded', () => {
     checkMessagesEmpty();
 });
+
+// Github repository fetch
+const GITHUB_USERNAME = 'zdotg';
+
+fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=5`)
+    .then(response => {
+        if(!response.ok) {
+            throw new Error(`Fetch failed! status: ${response.status}`);
+        }
+        return response.json()
+    })
+    .then(data => {
+        const repositories = data;
+
+        console.log('Github repositories:', repositories);
+
+        const projectSection = document.getElementById('projects');
+
+        const projectList = projectSection.querySelector('ul');
+
+        projectList.innerHTML = '';
+
+        for (let i = 0; i < repositories.length; i++){
+            const project = document.createElement('li');
+
+            project.innerText = repositories[i].name;
+
+            projectList.appendChild(project);
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching repositories:', error);
+
+        const projectSection = document.getElementById('projects');
+        const projectList = projectSection.querySelector('ul');
+
+        const errorItem = document.createElement('li');
+        errorItem.innerText = 'Unable to load projects.'
+        errorItem.style.color ='red';
+        projectList.appendChild(errorItem);
+    })
