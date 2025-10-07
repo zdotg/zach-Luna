@@ -1,24 +1,27 @@
-/* Import Google Fonts - Stretch Goal */
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
-/* Reset and Base Styles */
+/* ============================================
+   RESET AND BASE STYLES
+   ============================================ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling - Background color and default text color */
 body {
     background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
     color: #2c3e50;
     font-family: 'Inter', Arial, sans-serif;
     line-height: 1.7;
     min-height: 100vh;
-    padding: 140px 20px 40px 20px; /* Adjusted for fixed header */
+    padding: 140px 20px 40px 20px;
 }
 
-/* Header and Navigation Styles - NEW for assignment */
+/* ============================================
+   HEADER AND NAVIGATION
+   ============================================ */
 header {
     position: fixed;
     top: 0;
@@ -31,7 +34,6 @@ header {
     padding: 1rem 2rem;
 }
 
-/* Main heading in header - Modified from your original */
 header h1 {
     text-align: center;
     background: linear-gradient(45deg, #3498db, #2980b9);
@@ -46,7 +48,6 @@ header h1 {
     letter-spacing: 2px;
 }
 
-/* Navigation styles - NEW */
 nav ul {
     list-style: none;
     display: flex;
@@ -76,7 +77,9 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* Section Styling - Add spacing (padding/margin) between sections */
+/* ============================================
+   GENERAL SECTION STYLING
+   ============================================ */
 section {
     background: rgba(255, 255, 255, 0.95);
     margin: 30px auto;
@@ -85,12 +88,8 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     max-width: 900px;
-    
-    /* Colorful borders for debugging */
-    /* border: 3px solid #3498db; */
 }
 
-/* Section Heading Styles - Change font size, weight, and color of headings */
 section h2 {
     font-family: 'Playfair Display', serif;
     color: #34495e;
@@ -103,7 +102,9 @@ section h2 {
     letter-spacing: 1px;
 }
 
-/* About Section - Change alignment of content */
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
 #about {
     text-align: center;
     background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
@@ -135,7 +136,9 @@ section h2 {
     font-weight: 500;
 }
 
-/* Experience Section - Modified for flexbox layout */
+/* ============================================
+   EXPERIENCE SECTION
+   ============================================ */
 #experience {
     background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
 }
@@ -145,7 +148,6 @@ section h2 {
     border-bottom-color: rgba(236, 240, 241, 0.8);
 }
 
-/* NEW flexbox structure for experience items */
 .experience-item {
     background: rgba(255, 255, 255, 0.95);
     padding: 25px;
@@ -162,7 +164,6 @@ section h2 {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Flexbox header with title left, dates right */
 .experience-header {
     display: flex;
     justify-content: space-between;
@@ -205,21 +206,154 @@ section h2 {
     font-weight: 600;
 }
 
-/* Skills Section */
+/* ============================================
+   SKILLS SECTION
+   ============================================ */
 #skills {
-    background: rgba(255, 255, 255, 0.95);
+    background: linear-gradient(135deg, #16a085 0%, #1abc9c 100%);
 }
 
-/* Projects Section */
-#projects {
+#skills h2 {
+    color: #ecf0f1;
+    border-bottom-color: rgba(236, 240, 241, 0.8);
+    text-align: center;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+#skills ul li {
     background: rgba(255, 255, 255, 0.95);
+    color: #16a085;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    border-left: 5px solid #1abc9c;
+}
+
+#skills ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 1);
+}
+
+/* ============================================
+   PROJECTS SECTION
+   ============================================ */
+#projects {
+    background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+}
+
+#projects h2 {
+    color: #ecf0f1;
+    border-bottom-color: rgba(236, 240, 241, 0.8);
+    text-align: center;
 }
 
 #projects ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
 }
 
-/* Leave a Message Form Section */
+#projects ul li {
+    background: rgba(255, 255, 255, 0.95);
+    color: #8e44ad;
+    padding: 1.5rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    border-left: 5px solid #9b59b6;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#projects ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+/* ============================================
+   CONNECT SECTION
+   ============================================ */
+#connect {
+    background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+    text-align: center;
+}
+
+#connect h2 {
+    color: #2c3e50;
+    border-bottom-color: #34495e;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: inline-block;
+    padding: 18px 30px;
+    background: linear-gradient(45deg, #2c3e50, #34495e);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #34495e, #3498db);
+}
+
+.social-link:focus {
+    outline: 3px solid #3498db;
+    outline-offset: 3px;
+}
+
+.social-link[href*="github"]::before {
+    content: "💻 ";
+    margin-right: 8px;
+}
+
+.social-link[href*="linkedin"]::before {
+    content: "💼 ";
+    margin-right: 8px;
+}
+
+/* ============================================
+   LEAVE A MESSAGE SECTION
+   ============================================ */
 #leave-message {
     background: linear-gradient(135deg, #2cc492 0%, #9b59b6 100%);
 }
@@ -295,7 +429,9 @@ section h2 {
     transform: translateY(0);
 }
 
-/* Messages Section */
+/* ============================================
+   MESSAGES SECTION
+   ============================================ */
 #messages {
     background: linear-gradient(135deg, #7b159f 0%, #1abc9c 100%);
 }
@@ -373,65 +509,9 @@ section h2 {
     transform: translateY(0);
 }
 
-/* Connect Section - Modified for flexbox layout */
-#connect {
-    background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
-    text-align: center;
-}
-
-#connect h2 {
-    color: #2c3e50;
-    border-bottom-color: #34495e;
-}
-
-/* NEW flexbox structure for social links */
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-
-.social-link {
-    display: inline-block;
-    padding: 18px 30px;
-    background: linear-gradient(45deg, #2c3e50, #34495e);
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.95rem;
-    font-family: 'Inter', sans-serif;
-}
-
-.social-link:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(45deg, #34495e, #3498db);
-}
-
-.social-link:focus {
-    outline: 3px solid #3498db;
-    outline-offset: 3px;
-}
-
-/* Add icons to specific links - Stretch Goal */
-.social-link[href*="github"]::before {
-    content: "💻 ";
-    margin-right: 8px;
-}
-
-.social-link[href*="linkedin"]::before {
-    content: "💼 ";
-    margin-right: 8px;
-}
-
-/* Responsive Design */
+/* ============================================
+   RESPONSIVE DESIGN - TABLET
+   ============================================ */
 @media (max-width: 768px) {
     body {
         padding: 160px 15px 20px 15px;
@@ -474,6 +554,27 @@ section h2 {
         margin-top: 0.25rem;
     }
     
+    #skills ul {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.25rem;
+    }
+    
+    #skills ul li {
+        padding: 1.25rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    #projects ul {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1.25rem;
+    }
+    
+    #projects ul li {
+        padding: 1.25rem 1.25rem;
+        font-size: 1rem;
+        min-height: 70px;
+    }
+    
     .social-links {
         flex-direction: column;
         align-items: center;
@@ -485,26 +586,28 @@ section h2 {
         text-align: center;
     }
     
-    /* Form responsive styles */
     #leave-message input,
     #leave-message textarea {
         padding: 15px;
-        font-size: 16px; /* Prevents zoom on iOS */
+        font-size: 16px;
     }
     
     #leave-message button[type="submit"] {
         padding: 18px 30px;
         font-size: 1rem;
-        min-height: 50px; /* Better touch target */
+        min-height: 50px;
     }
     
     #messages li button {
         padding: 12px 24px;
         font-size: 0.95rem;
-        min-height: 44px; /* Better touch target */
+        min-height: 44px;
     }
 }
 
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE
+   ============================================ */
 @media (max-width: 480px) {
     body {
         padding: 180px 15px 20px 15px;
@@ -529,6 +632,27 @@ section h2 {
         font-size: 1rem;
     }
     
+    #skills ul {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 1rem;
+    }
+    
+    #skills ul li {
+        padding: 1rem 1.25rem;
+        font-size: 0.95rem;
+    }
+    
+    #projects ul {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    #projects ul li {
+        padding: 1.25rem 1rem;
+        font-size: 1rem;
+        min-height: 65px;
+    }
+    
     .social-link {
         padding: 15px 25px;
         font-size: 0.9rem;
@@ -536,7 +660,9 @@ section h2 {
     }
 }
 
-/* Accessibility Improvements */
+/* ============================================
+   ACCESSIBILITY - REDUCED MOTION
+   ============================================ */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
@@ -545,7 +671,9 @@ section h2 {
     }
 }
 
-/* High contrast mode support */
+/* ============================================
+   ACCESSIBILITY - HIGH CONTRAST MODE
+   ============================================ */
 @media (prefers-contrast: high) {
     body {
         background: #000;
@@ -557,17 +685,25 @@ section h2 {
         border: 2px solid #fff;
     }
     
-    #about {
+    #about,
+    #experience,
+    #skills,
+    #projects,
+    #connect,
+    #leave-message,
+    #messages {
         background: #333;
+    }
+    
+    #about {
         color: #fff;
     }
     
-    #experience {
-        background: #333;
-    }
-    
-    #connect {
-        background: #333;
+    #skills ul li,
+    #projects ul li {
+        background: #000;
+        color: #fff;
+        border: 2px solid #fff;
     }
     
     .social-link {
@@ -576,7 +712,9 @@ section h2 {
     }
 }
 
-/* Print styles */
+/* ============================================
+   PRINT STYLES
+   ============================================ */
 @media print {
     body {
         background: white;
@@ -590,9 +728,26 @@ section h2 {
         page-break-inside: avoid;
     }
     
+    #skills ul li,
+    #projects ul li {
+        background: white;
+        color: black;
+        border: 1px solid #ccc;
+        box-shadow: none;
+    }
+    
     .social-link {
         color: black;
         text-decoration: underline;
         background: none;
+    }
+    
+    #leave-message form {
+        display: none;
+    }
+    
+    #messages li {
+        background: white;
+        border: 1px solid #ccc;
     }
 }
